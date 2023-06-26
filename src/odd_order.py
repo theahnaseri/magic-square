@@ -1,4 +1,6 @@
-def fillOddOrder(magicSquare, n):
+def OddOrderMagicSquare(n):
+    magicSquare = [[0 for i in range(n)] for i in range(n)]
+
     # Initialize position of 1 (i: row, j: column)
     i = n // 2
     j = n - 1
@@ -33,3 +35,5 @@ def fillOddOrder(magicSquare, n):
         # The row of next number is i-1 and column of next number is j+1
         i = i - 1  
         j = j + 1
+    
+    return magicSquare

@@ -1,4 +1,6 @@
-def fillDoublyEvenOrder(magicSquare, n):
+def DoublyEvenOrderMagicSquare(n):
+    magicSquare = [[0 for i in range(n)] for i in range(n)]
+
     # Fill matrix with its count value starting from 1
     for i in range(n):
         for j in range(n):
@@ -28,4 +30,6 @@ def fillDoublyEvenOrder(magicSquare, n):
     # Centre submatrix of size n/2:
     for i in range(n//4, 3*(n//4)):
         for j in range(n//4, 3*(n//4)):
-            magicSquare[i][j] = (n*n + 1) - magicSquare[i][j] 
+            magicSquare[i][j] = (n*n + 1) - magicSquare[i][j]
+
+    return magicSquare
